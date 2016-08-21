@@ -15,38 +15,38 @@ const (
 	W  = 37
 )
 
-func base(colorN int, s string) string {
+func Base(colorN int, s string) string {
 	return fmt.Sprintf("\x1b[%dm%s\x1b[0m", colorN, s)
 }
 
 func Black(s string) string {
-	return base(Bk, s)
+	return Base(Bk, s)
 }
 
 func Red(s string) string {
-	return base(R, s)
+	return Base(R, s)
 }
 
 func Green(s string) string {
-	return base(G, s)
+	return Base(G, s)
 }
 
 func Yellow(s string) string {
-	return base(Y, s)
+	return Base(Y, s)
 }
 
 func Blue(s string) string {
-	return base(Bl, s)
+	return Base(Bl, s)
 }
 
 func Magenta(s string) string {
-	return base(M, s)
+	return Base(M, s)
 }
 
 func Cyan(s string) string {
-	return base(C, s)
+	return Base(C, s)
 }
 
 func White(s string) string {
-	return base(W, s)
+	return Base(W, s)
 }
