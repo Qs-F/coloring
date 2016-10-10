@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/Qs-F/cliset"
 	"github.com/fatih/color"
 )
 
@@ -94,6 +95,13 @@ func main() {
 	}
 
 	defer color.Unset()
+	if *msg == "" {
+		v, err := cliset.PipeValue()
+		if err != nil {
+			*msg = ""
+		}
+		*msg = v
+	}
 	if c == 0 && bg == 0 {
 		Output(*msg)
 	} else if c != 0 && bg == 0 {
